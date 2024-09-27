@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DoctorScene.unity
+    guid: fe8a16b8cbf15214c9cf03fd0deedfe1
+  - enabled: 1
+    path: Assets/Scenes/PatientScene.unity
+    guid: 0975567569c789744ad7845c2d94c2ab
   m_configObjects: {}
