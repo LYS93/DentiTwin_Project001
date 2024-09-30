@@ -11,14 +11,15 @@ public class start01 : MonoBehaviour
 
     private void Awake()
     {
-        // 이 오브젝트가 파괴되지 않도록 설정
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
-
     void Start()
     {
+        optionsPanel = GameObject.Find("Canvas_sound");
         // 시작 시 옵션 패널을 비활성화
         optionsPanel.SetActive(false);
+
+        
     }
     void Update()
     {
@@ -52,6 +53,11 @@ public class start01 : MonoBehaviour
         // 환자 씬으로 전환
         SceneManager.LoadScene("PatientScene");
     }
+    public void back()
+    {
+        //시작 씬으로 전환
+        SceneManager.LoadScene("StartScene");
+    }
     public void Quit()
     {
         //게임종료
@@ -61,4 +67,5 @@ public class start01 : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false; // 에디터에서는 플레이 모드 종료
 #endif
     }
+
 }
