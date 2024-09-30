@@ -12,6 +12,7 @@ public class start02 : MonoBehaviour
     private float timer = 0f; // 타이머 변수
     private bool isTextVisible = true; // 텍스트 보이는 상태
 
+
     private void Awake()
     {
         float savedRestart = PlayerPrefs.GetFloat("Restart");//Restart값을 가져옴
