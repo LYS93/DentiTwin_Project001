@@ -9,6 +9,12 @@ public class start01 : MonoBehaviour
     public GameObject optionsPanel; // 옵션 패널
     public Button[] buttons; //옵션 패널 이외의 버튼
 
+    private void Awake()
+    {
+        // 이 오브젝트가 파괴되지 않도록 설정
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         // 시작 시 옵션 패널을 비활성화
