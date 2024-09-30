@@ -11,7 +11,7 @@ public class start02 : MonoBehaviour
 
     private float timer = 0f; // 타이머 변수
     private bool isTextVisible = true; // 텍스트 보이는 상태
-    float gjtn=0f;
+    
 
     private void Awake()
     {
