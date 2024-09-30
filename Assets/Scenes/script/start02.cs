@@ -23,12 +23,13 @@ public class start02 : MonoBehaviour
             Destroy(gameObject);// 이 GameObject를 파괴
             PlayerPrefs.DeleteKey("Restart");//Restart값 초기화
         }
+        else
+        {
+            PlayerPrefs.DeleteAll(); // 모든 PlayerPrefs 삭제
+            PlayerPrefs.Save(); // 변경사항 저장
+        }
     }
-    private void Start()
-    {
-        PlayerPrefs.DeleteAll(); // 모든 PlayerPrefs 삭제
-        PlayerPrefs.Save(); // 변경사항 저장
-    }
+    
     private void Update()
     {
         // 타이머를 업데이트
