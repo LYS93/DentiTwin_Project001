@@ -1125,7 +1125,7 @@ GameObject:
   - component: {fileID: 1368233092}
   - component: {fileID: 1368233096}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas_startScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2fc73e83275fb84499791eb8f57a03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myText: {fileID: 603573935}
+  startText: {fileID: 603573935}
   blinkInterval: 0.5
 --- !u!114 &1418061699 stripped
 MonoBehaviour:
@@ -1961,6 +1961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8561482122574228107, guid: 1aad050c045509545b2fa1335700e33b, type: 3}
+      propertyPath: startScreen
+      value: 
+      objectReference: {fileID: 1368233091}
     - target: {fileID: 8561482122574228107, guid: 1aad050c045509545b2fa1335700e33b, type: 3}
       propertyPath: optionsPanel
       value: 

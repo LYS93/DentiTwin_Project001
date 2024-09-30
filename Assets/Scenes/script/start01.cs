@@ -8,15 +8,20 @@ public class start01 : MonoBehaviour
 {
     public GameObject optionsPanel; // 옵션 패널
     public Button[] buttons; //옵션 패널 이외의 버튼
-
+    float restart;//다시 시작할때
+    public GameObject startScreen;//시작스크린
     
     void Start()
     {
-        optionsPanel = GameObject.Find("Canvas_sound");
         // 시작 시 옵션 패널을 비활성화
         optionsPanel.SetActive(false);
-
         
+        //시작스크린이 없을때
+        if(startScreen == null)
+        {
+            PlayerPrefs.DeleteKey("Restart");//Restart값 초기화
+        }
+
     }
     void Update()
     {
@@ -54,11 +59,16 @@ public class start01 : MonoBehaviour
     {
         //시작 씬으로 전환
         SceneManager.LoadScene("StartScene");
+        //재시작에는 시작스크린이 안뜨도록
+        restart += 1f;
+        PlayerPrefs.SetFloat("Restart", restart);
     }
     public void Quit()
     {
         //게임종료
         Application.Quit();
+        //Restart값 초기화
+        PlayerPrefs.DeleteKey("Restart");
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // 에디터에서는 플레이 모드 종료
