@@ -69,6 +69,8 @@ public class start01 : MonoBehaviour
         Application.Quit();
         //Restart값 초기화
         PlayerPrefs.DeleteKey("Restart");
+        PlayerPrefs.DeleteAll(); // 모든 PlayerPrefs 삭제
+        PlayerPrefs.Save(); // 변경사항 저장
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // 에디터에서는 플레이 모드 종료
