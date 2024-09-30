@@ -67,8 +67,7 @@ public class start01 : MonoBehaviour
     {
         //게임종료
         Application.Quit();
-        //Restart값 초기화
-        PlayerPrefs.DeleteKey("Restart");
+        
         PlayerPrefs.DeleteAll(); // 모든 PlayerPrefs 삭제
         PlayerPrefs.Save(); // 변경사항 저장
 
