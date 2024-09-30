@@ -9,10 +9,7 @@ public class start01 : MonoBehaviour
     public GameObject optionsPanel; // 옵션 패널
     public Button[] buttons; //옵션 패널 이외의 버튼
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
+    
     void Start()
     {
         optionsPanel = GameObject.Find("Canvas_sound");

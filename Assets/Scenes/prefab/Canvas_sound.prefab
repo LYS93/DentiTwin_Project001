@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 3426204068859029452}
   - component: {fileID: 2261280324198305468}
   - component: {fileID: 1169063027015513133}
-  - component: {fileID: 2255460754122764960}
   m_Layer: 5
   m_Name: Canvas_sound
   m_TagString: Untagged
@@ -261,18 +260,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2255460754122764960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882243530512357487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fa2f1d44d6e737488f5bc462ec96062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1087771517683334795
 GameObject:
   m_ObjectHideFlags: 0

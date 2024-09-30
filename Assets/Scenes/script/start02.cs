@@ -28,7 +28,7 @@ public class start02 : MonoBehaviour
         // 사용자가 어떤 키든 눌렀을 때
         if (Input.anyKeyDown)
         {
-            Destroy(gameObject, 1.5f); // 이 GameObject를 파괴
+            Destroy(gameObject, 0.5f); // 이 GameObject를 파괴
         }
     }
 }

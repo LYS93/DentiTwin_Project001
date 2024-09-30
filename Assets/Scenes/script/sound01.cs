@@ -12,12 +12,7 @@ public class sound01 : MonoBehaviour
     public Text backgroundVolumeText; // 배경음 현재 음량 텍스트
     public Text soundEffectVolumeText; // 효과음 현재 음량 텍스트
 
-    private void Awake()
-    {
-        // 이 오브젝트가 파괴되지 않도록 설정
-        DontDestroyOnLoad(gameObject);
-    }
-
+    
     private void Start()
     {
         // PlayerPrefs에서 음량 불러오기
