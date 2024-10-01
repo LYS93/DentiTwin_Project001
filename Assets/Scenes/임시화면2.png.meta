@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 686919862346ba342901116411ab8f70
+guid: 544eed654ed53fa48a33660af519c811
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,91 +134,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: PC_Patient_Back_Anim_0
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 12
-        width: 32
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32e30febe779e4c40b2739d8666a30c0
-      internalID: 40680759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PC_Patient_Back_Anim_1
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 12
-        width: 32
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 156b1a1a1494e53418cbaf5c7657a5c2
-      internalID: -1526192594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PC_Patient_Back_Anim_2
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 12
-        width: 32
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b706a0027dbde6d44bced834de4064e0
-      internalID: 1605728289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PC_Patient_Back_Anim_3
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 12
-        width: 32
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59affe29d809a384aad793c94016933e
-      internalID: -1355830646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -229,11 +145,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      PC_Patient_Back_Anim_0: 40680759
-      PC_Patient_Back_Anim_1: -1526192594
-      PC_Patient_Back_Anim_2: 1605728289
-      PC_Patient_Back_Anim_3: -1355830646
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
