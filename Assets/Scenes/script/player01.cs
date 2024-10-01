@@ -82,4 +82,18 @@ public class player01 : MonoBehaviour
             playerAnima.SetBool("down", false);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "wall")
+        {
+            playerSprite.sortingOrder = 7;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "wall")
+        {
+            playerSprite.sortingOrder = 3;
+        }
+    }
 }
