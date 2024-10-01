@@ -14,7 +14,7 @@ public class start02 : MonoBehaviour
     public Image blink;
     private float timer2 = 0f; // 타이머 변수2
     bool isImageVisible = false; // 점멸스크린 보이는 상태
-    float blinkInterval2 = 0.05f; // 깜빡이는 간격2
+    float blinkInterval2 = 0.07f; // 깜빡이는 간격2
     private bool isBlinking = false; //깜빡이는 상태
 
 
@@ -53,7 +53,7 @@ public class start02 : MonoBehaviour
         //사용자가 어떤 키든 눌렀을 때
         if (Input.anyKeyDown)
         {
-            Destroy(gameObject, 1f); // 이 GameObject를 파괴
+            Destroy(gameObject, 0.7f); // 이 GameObject를 파괴
         }
 
         // 사용자가 어떤 키든 눌렀을 때
