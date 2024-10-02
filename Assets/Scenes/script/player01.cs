@@ -9,6 +9,10 @@ public class player01 : MonoBehaviour
     Animator playerAnima;
     bool isMoving; //움직일때
 
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -84,22 +88,22 @@ public class player01 : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "wall")
+        if(collision.gameObject.CompareTag("wall"))
         {
             playerSprite.sortingOrder = 7;
         }
-        if (collision.gameObject.tag == "wallwall")
+        if (collision.gameObject.CompareTag("wallwall"))
         {
             playerSprite.sortingOrder = 2;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "wall")
+        if (collision.gameObject.CompareTag("wall"))
         {
             playerSprite.sortingOrder = 4;
         }
-        if (collision.gameObject.tag == "wallwall")
+        if (collision.gameObject.CompareTag("wallwall"))
         {
             playerSprite.sortingOrder = 4;
         }
