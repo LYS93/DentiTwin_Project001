@@ -14,7 +14,7 @@ public class start02 : MonoBehaviour
     public Image blink;
     private float timer2 = 0f; // 타이머 변수2
     bool isImageVisible = false; // 점멸스크린 보이는 상태
-    float blinkInterval2 = 0.07f; // 깜빡이는 간격2
+    float blinkInterval2 = 0.08f; // 깜빡이는 간격2
     private bool isBlinking = false; //깜빡이는 상태
 
 
