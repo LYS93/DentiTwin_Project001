@@ -29,6 +29,7 @@ public class player01 : MonoBehaviour
 
         if (!npcScript.talkScreen.activeSelf)
         {
+            playerAnima.speed = 1;
             // 오른쪽 이동
             if (Input.GetKey(KeyCode.RightArrow))
             {
@@ -89,6 +90,10 @@ public class player01 : MonoBehaviour
             {
                 playerAnima.SetBool("down", false);
             }
+        }
+        if (npcScript.talkScreen.activeSelf)
+        {
+            playerAnima.speed = 0;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)

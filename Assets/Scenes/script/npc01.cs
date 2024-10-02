@@ -47,7 +47,7 @@ public class npc01 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            npcText.enabled = false;            
+            npcText.enabled = false;
         }
     }
 }
