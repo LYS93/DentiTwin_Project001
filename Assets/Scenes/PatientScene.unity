@@ -1065,7 +1065,7 @@ Transform:
   m_GameObject: {fileID: 1342719340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.4, y: -12, z: 0}
+  m_LocalPosition: {x: -4.15, y: -2.79, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1155,6 +1155,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 57474795943906258, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57474795943906258, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57474795943906258, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826814018129097621, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826814018129097621, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 380
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998986344066543513, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998986344066543513, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 620
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998986344066543513, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -300
+      objectReference: {fileID: 0}
     - target: {fileID: 5662353358181141803, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1239,6 +1271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_talk
       objectReference: {fileID: 0}
+    - target: {fileID: 6740220054578388962, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f97d6897d51bb24888c24b7b8e5c055, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
