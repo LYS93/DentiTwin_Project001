@@ -88,12 +88,20 @@ public class player01 : MonoBehaviour
         {
             playerSprite.sortingOrder = 7;
         }
+        if (collision.gameObject.tag == "wallwall")
+        {
+            playerSprite.sortingOrder = 2;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "wall")
         {
-            playerSprite.sortingOrder = 3;
+            playerSprite.sortingOrder = 4;
+        }
+        if (collision.gameObject.tag == "wallwall")
+        {
+            playerSprite.sortingOrder = 4;
         }
     }
 }
