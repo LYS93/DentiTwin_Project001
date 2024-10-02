@@ -10,9 +10,12 @@ public class start01 : MonoBehaviour
     public Button[] buttons; //옵션 패널 이외의 버튼
     float restart;//다시 시작할때
     public GameObject startScreen;//시작스크린
+    public npc01 npcTalk; //대화창
     
     void Start()
     {
+
+        npcTalk = GameObject.Find("Collider").GetComponent<npc01>();
         // 시작 시 옵션 패널을 비활성화
         optionsPanel.SetActive(false);
         
@@ -27,11 +30,16 @@ public class start01 : MonoBehaviour
     {
         // 옵션 패널의 활성화 상태에 따라 버튼 상태 변경
         bool isActive = optionsPanel.activeSelf;
+        bool isActive2 = npcTalk.talkScreen.activeSelf;
 
         // 버튼 배열을 순회하며 interactable 속성 설정
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].interactable = !isActive; // 옵션 패널이 활성화되면 버튼 비활성화
+        }
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = !isActive2; // 옵션 패널이 활성화되면 버튼 비활성화
         }
     }
     public void OnOptions()

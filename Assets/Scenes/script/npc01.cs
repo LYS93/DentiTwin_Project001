@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class npc01 : MonoBehaviour
 {
-    public Text npcText;
-    public GameObject talkScreen;
+    public Text npcText; //npc 머리위의 텍스트
+    public GameObject talkScreen; //대화창
+    bool playerIn; //플레이어 범위판정
     
-    // Start is called before the first frame update
+    
     void Start()
     {
         npcText.enabled = false;
@@ -18,17 +19,27 @@ public class npc01 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            talkScreen.SetActive(false);
-        }
+        //대화창이 활성화 상태일때
         if(talkScreen.activeSelf)
         {
             npcText.text = "대화를 종료하려면 'ESC'를 눌러주세요";
         }
-        else if (!talkScreen.activeSelf)
+        else if (!talkScreen.activeSelf) //대화창이 비활성화 상태일때
         {
             npcText.text = "대화를 하시려면 '스페이스바'를 눌러주세요";
+        }
+        
+        //플레이어가 npc범위 안으로 들어갔을때
+        if (playerIn)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                talkScreen.SetActive(true);
+            }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                talkScreen.SetActive(false);
+            }
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -37,10 +48,7 @@ public class npc01 : MonoBehaviour
         {
             npcText.enabled = true;
             npcText.text = "대화를 하시려면 '스페이스바'를 눌러주세요";
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                talkScreen.SetActive(true);
-            }            
+            playerIn = true;        
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -48,6 +56,7 @@ public class npc01 : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             npcText.enabled = false;
+            playerIn = false;
         }
     }
 }

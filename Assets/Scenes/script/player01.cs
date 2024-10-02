@@ -27,8 +27,10 @@ public class player01 : MonoBehaviour
     {
         isMoving = false;
 
+        //대화창이 활성화되면 이동중지
         if (!npcScript.talkScreen.activeSelf)
         {
+            //애니메이션 재생
             playerAnima.speed = 1;
             // 오른쪽 이동
             if (Input.GetKey(KeyCode.RightArrow))
@@ -91,9 +93,11 @@ public class player01 : MonoBehaviour
                 playerAnima.SetBool("down", false);
             }
         }
+        
+        //대화창이 활성화 상태일때
         if (npcScript.talkScreen.activeSelf)
         {
-            playerAnima.speed = 0;
+            playerAnima.speed = 0;//애니메이션 중지
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
