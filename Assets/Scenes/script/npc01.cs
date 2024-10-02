@@ -22,6 +22,14 @@ public class npc01 : MonoBehaviour
         {
             talkScreen.SetActive(false);
         }
+        if(talkScreen.activeSelf)
+        {
+            npcText.text = "대화를 종료하려면 'ESC'를 눌러주세요";
+        }
+        else if (!talkScreen.activeSelf)
+        {
+            npcText.text = "대화를 하시려면 '스페이스바'를 눌러주세요";
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

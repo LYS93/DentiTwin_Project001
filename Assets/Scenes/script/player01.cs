@@ -8,6 +8,7 @@ public class player01 : MonoBehaviour
     public float playerSpeed; //이동속도
     Animator playerAnima;
     bool isMoving; //움직일때
+    npc01 npcScript;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class player01 : MonoBehaviour
     {
         playerSprite = GetComponent<SpriteRenderer>();
         playerAnima = GetComponent<Animator>();
+        npcScript = GameObject.Find("Collider").GetComponent<npc01>();
     }
 
     // Update is called once per frame
@@ -25,65 +27,68 @@ public class player01 : MonoBehaviour
     {
         isMoving = false;
 
-        // 오른쪽 이동
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (!npcScript.talkScreen.activeSelf)
         {
-            transform.Translate(Time.fixedDeltaTime * playerSpeed, 0, 0);
-            playerSprite.flipX = false;
-            playerAnima.SetBool("right", true);
-            playerAnima.SetBool("up", false);
-            playerAnima.SetBool("down", false);
-            isMoving = true;
-        }
-        // 왼쪽 이동
-        else if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(-Time.fixedDeltaTime * playerSpeed, 0, 0);
-            playerSprite.flipX = true;
-            playerAnima.SetBool("right", true);
-            playerAnima.SetBool("up", false);
-            playerAnima.SetBool("down", false);
-            isMoving = true;
-        }
-        // 위 이동
-        else if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(0, Time.fixedDeltaTime * playerSpeed, 0);
-            playerAnima.SetBool("up", true);
-            playerAnima.SetBool("right", false);
-            playerAnima.SetBool("down", false);
-            isMoving = true;
-        }
-        // 아래 이동
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(0, -Time.fixedDeltaTime * playerSpeed, 0);
-            playerAnima.SetBool("down", true);
-            playerAnima.SetBool("right", false);
-            playerAnima.SetBool("up", false);
-            isMoving = true;
-        }
+            // 오른쪽 이동
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Translate(Time.fixedDeltaTime * playerSpeed, 0, 0);
+                playerSprite.flipX = false;
+                playerAnima.SetBool("right", true);
+                playerAnima.SetBool("up", false);
+                playerAnima.SetBool("down", false);
+                isMoving = true;
+            }
+            // 왼쪽 이동
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Translate(-Time.fixedDeltaTime * playerSpeed, 0, 0);
+                playerSprite.flipX = true;
+                playerAnima.SetBool("right", true);
+                playerAnima.SetBool("up", false);
+                playerAnima.SetBool("down", false);
+                isMoving = true;
+            }
+            // 위 이동
+            else if (Input.GetKey(KeyCode.UpArrow))
+            {
+                transform.Translate(0, Time.fixedDeltaTime * playerSpeed, 0);
+                playerAnima.SetBool("up", true);
+                playerAnima.SetBool("right", false);
+                playerAnima.SetBool("down", false);
+                isMoving = true;
+            }
+            // 아래 이동
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.Translate(0, -Time.fixedDeltaTime * playerSpeed, 0);
+                playerAnima.SetBool("down", true);
+                playerAnima.SetBool("right", false);
+                playerAnima.SetBool("up", false);
+                isMoving = true;
+            }
 
-        // 이동하지 않을 때 애니메이션 상태 변경
-        if (!isMoving)
-        {
-            playerAnima.SetBool("right", false);
-            playerAnima.SetBool("up", false);
-            playerAnima.SetBool("down", false);
-        }
+            // 이동하지 않을 때 애니메이션 상태 변경
+            if (!isMoving)
+            {
+                playerAnima.SetBool("right", false);
+                playerAnima.SetBool("up", false);
+                playerAnima.SetBool("down", false);
+            }
 
-        // 키를 놓았을 때 애니메이션 상태 변경
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            playerAnima.SetBool("right", false);
-        }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            playerAnima.SetBool("up", false);
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            playerAnima.SetBool("down", false);
+            // 키를 놓았을 때 애니메이션 상태 변경
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+                playerAnima.SetBool("right", false);
+            }
+            if (Input.GetKeyUp(KeyCode.UpArrow))
+            {
+                playerAnima.SetBool("up", false);
+            }
+            if (Input.GetKeyUp(KeyCode.DownArrow))
+            {
+                playerAnima.SetBool("down", false);
+            }
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
