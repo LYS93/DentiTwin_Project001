@@ -11,20 +11,24 @@ public class start01 : MonoBehaviour
     float restart;//다시 시작할때
     public GameObject startScreen;//시작스크린
     public npc01 npcTalk; //대화창
-    
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+        
+        // 시작 시 옵션 패널을 비활성화
+        optionsPanel.SetActive(false);
+    }
     void Start()
     {
 
         npcTalk = GameObject.Find("Collider").GetComponent<npc01>();
-        // 시작 시 옵션 패널을 비활성화
-        optionsPanel.SetActive(false);
-        
+       
         //시작스크린이 없을때
         if(startScreen == null)
         {
             PlayerPrefs.DeleteKey("Restart");//Restart값 초기화
         }
-
     }
     void Update()
     {
