@@ -1062,6 +1062,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1218316841557145476, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2df86e41434ba584ead0c8ba24605940, type: 3}
     - target: {fileID: 1722886811613313450, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1142,17 +1146,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594321907911236516, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7003632567807402816, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
       propertyPath: m_Name
       value: Canvas_talk
       objectReference: {fileID: 0}
+    - target: {fileID: 8135254263605964730, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135254263605964730, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -260
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357289060440086193, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1950
+      objectReference: {fileID: 0}
     - target: {fileID: 8357289060440086193, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 600
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 8357289060440086193, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -280
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1233,9 +1253,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1157787939}
+    - target: {fileID: 2071330948503413481, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071330948503413481, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -465
+      objectReference: {fileID: 0}
     - target: {fileID: 2098092083830662052, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
       propertyPath: m_Name
       value: Canvas_button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429136835116573813, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4553710350033606365, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
       propertyPath: m_Pivot.x
