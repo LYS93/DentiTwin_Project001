@@ -458,6 +458,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7003632567807402816, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
   m_PrefabInstance: {fileID: 967062063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &967062065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4675719692334875408, guid: dd315f72bfed34e44bc9d9ab4d6c4115, type: 3}
+  m_PrefabInstance: {fileID: 967062063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1008791254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1110,8 +1121,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 819586239724719953, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1218613680}
   m_SourcePrefab: {fileID: 100100000, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+--- !u!1 &1218613679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 819586239724719953, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+  m_PrefabInstance: {fileID: 1218613678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1218613680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218613679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6adcd15cf8e561a43ac5c74e738b0b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 967062065}
+  messages:
+  - "\uB300\uD654\uCC3D \uC785\uB2C8\uB2E4"
+  - "\uB2E4\uC74C \uB300\uD654\uCC3D \uC785\uB2C8\uB2E4"
+  - "\uB9C8\uC9C0\uB9C9 \uB300\uD654\uCC3D \uC785\uB2C8\uB2E4"
+  typingSpeed: 0.1
+  dialogCanvas: {fileID: 967062064}
 --- !u!1001 &1310288080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1202,7 +1240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6369338474a83b34db585fdd0a88e88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 3
+  playerSpeed: 10
 --- !u!50 &1342719342
 Rigidbody2D:
   serializedVersion: 4

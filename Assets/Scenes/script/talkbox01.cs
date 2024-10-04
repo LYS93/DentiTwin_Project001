@@ -12,27 +12,49 @@ public class talkbox01 : MonoBehaviour
     private int currentMessageIndex = 0;  // 현재 메시지 인덱스
     private bool isTyping = false;  // 현재 타이핑 중인지 확인
     private bool messageCompleted = false;  // 메시지가 모두 출력되었는지 확인
+    public GameObject dialogCanvas;  // 대화창이 있는 캔버스
+
+    private bool dialogJustOpened = false;  // 대화창이 방금 열렸는지 확인하는 변수
 
     void Start()
     {
-        StartCoroutine(TypeText());  // 첫 메시지 출력 시작
+        dialogCanvas.SetActive(false);  // 처음엔 대화창을 비활성화
     }
 
     void Update()
     {
+        // 대화창이 열리는 순간 감지
+        if (dialogCanvas.activeSelf && !dialogJustOpened)
+        {
+            dialogJustOpened = true;  // 대화창이 방금 열렸다고 표시
+            currentMessageIndex = 0;  // 대화 인덱스를 처음으로 설정
+            messageCompleted = false;  // 메시지 완료 상태 초기화
+            isTyping = false;  // 타이핑 상태 초기화
+            uiText.text = "";  // 대화창 텍스트 초기화
+            StartCoroutine(TypeText());  // 메시지 출력 시작
+        }
+
         // 메시지가 출력 완료된 후, 스페이스바나 마우스 왼쪽 버튼을 누르면 다음 메시지로 이동
-        if (messageCompleted && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        if (messageCompleted && !isTyping && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
             if (currentMessageIndex < messages.Length - 1)  // 마지막 메시지가 아니라면
             {
                 currentMessageIndex++;  // 메시지 인덱스 증가
                 uiText.text = "";  // 텍스트 초기화
+                messageCompleted = false;
                 StartCoroutine(TypeText());  // 다음 메시지 출력 시작
             }
             else
             {
                 Debug.Log("모든 메시지가 출력되었습니다.");  // 모든 메시지 출력 완료
             }
+        }
+
+        // 대화창이 닫히면 초기 상태로 되돌림
+        if (!dialogCanvas.activeSelf)
+        {
+            dialogJustOpened = false;  // 대화창이 닫혔다고 표시
+            uiText.text = "";  // 대화창 텍스트 초기화
         }
     }
 
@@ -46,11 +68,10 @@ public class talkbox01 : MonoBehaviour
         for (int i = 0; i < message.Length; i++)
         {
             uiText.text += message[i];  // 한 글자씩 추가
-            yield return new WaitForSeconds(typingSpeed);  // 설정된 시간만큼 대기
+            yield return new WaitForSeconds(Mathf.Max(typingSpeed, 0.05f));  // 최소 대기 시간을 0.05초로 설정
         }
 
         isTyping = false;
         messageCompleted = true;  // 메시지 출력 완료 상태로 변경
     }
-
 }
