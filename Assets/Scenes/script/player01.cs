@@ -33,7 +33,7 @@ public class player01 : MonoBehaviour
             //애니메이션 재생
             playerAnima.speed = 1;
             // 오른쪽 이동
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.Translate(Time.fixedDeltaTime * playerSpeed, 0, 0);
                 playerSprite.flipX = false;
@@ -43,7 +43,7 @@ public class player01 : MonoBehaviour
                 isMoving = true;
             }
             // 왼쪽 이동
-            else if (Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.A))
             {
                 transform.Translate(-Time.fixedDeltaTime * playerSpeed, 0, 0);
                 playerSprite.flipX = true;
@@ -53,7 +53,7 @@ public class player01 : MonoBehaviour
                 isMoving = true;
             }
             // 위 이동
-            else if (Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(0, Time.fixedDeltaTime * playerSpeed, 0);
                 playerAnima.SetBool("up", true);
@@ -62,7 +62,7 @@ public class player01 : MonoBehaviour
                 isMoving = true;
             }
             // 아래 이동
-            else if (Input.GetKey(KeyCode.DownArrow))
+            else if (Input.GetKey(KeyCode.S))
             {
                 transform.Translate(0, -Time.fixedDeltaTime * playerSpeed, 0);
                 playerAnima.SetBool("down", true);
