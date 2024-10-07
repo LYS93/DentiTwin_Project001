@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class talkbox01 : MonoBehaviour
 {
     public Text uiText;  // UI Text 컴포넌트를 연결
-    public string[] messages = { "대화창 입니다", "다음 대화창 입니다", "마지막 대화창 입니다" };  // 출력할 여러 메시지
+    [TextArea]
+    public string[] messages; // 출력할 여러 메시지
     public float typingSpeed = 0.1f;  // 글자가 나타나는 속도 (초)
 
     private int currentMessageIndex = 0;  // 현재 메시지 인덱스
