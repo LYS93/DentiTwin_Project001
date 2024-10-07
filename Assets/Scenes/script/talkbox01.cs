@@ -15,10 +15,11 @@ public class talkbox01 : MonoBehaviour
     public GameObject dialogCanvas;  // 대화창이 있는 캔버스
 
     private bool dialogJustOpened = false;  // 대화창이 방금 열렸는지 확인하는 변수
+    private Coroutine typingCoroutine;  // 현재 실행 중인 코루틴을 저장하는 변수
 
     void Start()
     {
-        dialogCanvas.SetActive(false);  // 처음엔 대화창을 비활성화
+        //dialogCanvas.SetActive(false);  // 처음엔 대화창을 비활성화
     }
 
     void Update()
@@ -31,7 +32,15 @@ public class talkbox01 : MonoBehaviour
             messageCompleted = false;  // 메시지 완료 상태 초기화
             isTyping = false;  // 타이핑 상태 초기화
             uiText.text = "";  // 대화창 텍스트 초기화
-            StartCoroutine(TypeText());  // 메시지 출력 시작
+
+            // 기존에 실행 중인 코루틴이 있다면 중단
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+            }
+
+            // 새로운 코루틴 실행
+            typingCoroutine = StartCoroutine(TypeText());  // 메시지 출력 시작
         }
 
         // 메시지가 출력 완료된 후, 스페이스바나 마우스 왼쪽 버튼을 누르면 다음 메시지로 이동
@@ -42,12 +51,20 @@ public class talkbox01 : MonoBehaviour
                 currentMessageIndex++;  // 메시지 인덱스 증가
                 uiText.text = "";  // 텍스트 초기화
                 messageCompleted = false;
-                StartCoroutine(TypeText());  // 다음 메시지 출력 시작
+
+                // 기존에 실행 중인 코루틴이 있다면 중단
+                if (typingCoroutine != null)
+                {
+                    StopCoroutine(typingCoroutine);
+                }
+
+                // 새로운 코루틴 실행
+                typingCoroutine = StartCoroutine(TypeText());  // 다음 메시지 출력 시작
             }
-            else
-            {
-                Debug.Log("모든 메시지가 출력되었습니다.");  // 모든 메시지 출력 완료
-            }
+            //else
+            //{
+            //    Debug.Log("모든 메시지가 출력되었습니다.");  // 모든 메시지 출력 완료
+            //}
         }
 
         // 대화창이 닫히면 초기 상태로 되돌림
