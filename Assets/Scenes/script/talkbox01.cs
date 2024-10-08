@@ -20,7 +20,7 @@ public class talkbox01 : MonoBehaviour
 
     void Start()
     {
-        //dialogCanvas.SetActive(false);  // 처음엔 대화창을 비활성화
+        // dialogCanvas.SetActive(false);  // 처음엔 대화창을 비활성화
     }
 
     void Update()
@@ -62,10 +62,10 @@ public class talkbox01 : MonoBehaviour
                 // 새로운 코루틴 실행
                 typingCoroutine = StartCoroutine(TypeText());  // 다음 메시지 출력 시작
             }
-            //else
-            //{
-            //    Debug.Log("모든 메시지가 출력되었습니다.");  // 모든 메시지 출력 완료
-            //}
+            // else
+            // {
+            //     Debug.Log("모든 메시지가 출력되었습니다.");  // 모든 메시지 출력 완료
+            // }
         }
 
         // 대화창이 닫히면 초기 상태로 되돌림
@@ -81,12 +81,40 @@ public class talkbox01 : MonoBehaviour
         isTyping = true;
         messageCompleted = false;
         string message = messages[currentMessageIndex];  // 현재 메시지를 가져옴
+        uiText.text = "";  // 대화창 텍스트 초기화
 
-        // 메시지의 각 문자를 하나씩 출력
-        for (int i = 0; i < message.Length; i++)
+        int charIndex = 0;
+        while (charIndex < message.Length)
         {
-            uiText.text += message[i];  // 한 글자씩 추가
-            yield return new WaitForSeconds(Mathf.Max(typingSpeed, 0.05f));  // 최소 대기 시간을 0.05초로 설정
+            if (message[charIndex] == '<')  // 태그의 시작 부분이면
+            {
+                // 태그와 그 안의 내용을 한꺼번에 처리
+                int tagEndIndex = message.IndexOf('>', charIndex);  // 태그의 끝을 찾음
+                if (tagEndIndex != -1)
+                {
+                    // 태그 닫힌 부분 이후에 나오는 텍스트가 있는지 확인
+                    int closeTagIndex = message.IndexOf("</color>", tagEndIndex);
+                    if (closeTagIndex != -1)
+                    {
+                        // 태그와 그 안의 텍스트를 한 번에 출력
+                        string coloredText = message.Substring(charIndex, closeTagIndex + 8 - charIndex);  // </color> 포함
+                        uiText.text += coloredText;
+                        charIndex = closeTagIndex + 8;  // </color> 이후로 인덱스 이동
+                    }
+                    else
+                    {
+                        // 잘못된 태그일 경우 안전하게 처리
+                        charIndex = tagEndIndex + 1;
+                    }
+                }
+            }
+            else
+            {
+                // 태그가 아닌 경우 한 글자씩 출력
+                uiText.text += message[charIndex];
+                charIndex++;
+                yield return new WaitForSeconds(Mathf.Max(typingSpeed, 0.05f));  // 최소 대기 시간을 0.05초로 설정
+            }
         }
 
         isTyping = false;
