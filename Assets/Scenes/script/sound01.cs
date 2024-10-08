@@ -12,12 +12,11 @@ public class sound01 : MonoBehaviour
     public Text backgroundVolumeText; // 배경음 현재 음량 텍스트
     public Text soundEffectVolumeText; // 효과음 현재 음량 텍스트
 
-    
     private void Start()
     {
         // PlayerPrefs에서 음량 불러오기
-        float savedBackgroundVolume = PlayerPrefs.GetFloat("BackgroundVolume",1f); // 기본값 1
-        float savedSoundEffectVolume = PlayerPrefs.GetFloat("SoundEffectVolume",1f); // 기본값 1
+        float savedBackgroundVolume = PlayerPrefs.GetFloat("BackgroundVolume", 1f); // 기본값 1
+        float savedSoundEffectVolume = PlayerPrefs.GetFloat("SoundEffectVolume", 1f); // 기본값 1
 
         // 슬라이더의 초기 값 설정
         backgroundVolumeSlider.value = savedBackgroundVolume;
@@ -26,6 +25,17 @@ public class sound01 : MonoBehaviour
         // 초기 텍스트 업데이트
         backgroundVolumeText.text = $"{Mathf.RoundToInt(savedBackgroundVolume * 100)}%";
         soundEffectVolumeText.text = $"{Mathf.RoundToInt(savedSoundEffectVolume * 100)}%";
+
+        // 저장된 값을 오디오 소스에 즉시 적용
+        for (int i = 0; i < backgroundAudioSources.Length; i++)
+        {
+            backgroundAudioSources[i].volume = savedBackgroundVolume;
+        }
+
+        for (int i = 0; i < soundEffectAudioSources.Length; i++)
+        {
+            soundEffectAudioSources[i].volume = savedSoundEffectVolume;
+        }
 
         // 배경음 슬라이더 값 변경 리스너
         backgroundVolumeSlider.onValueChanged.AddListener(delegate {
