@@ -20,6 +20,7 @@ public class player01 : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
         playerAnima = GetComponent<Animator>();
         npcScript = GameObject.Find("Collider").GetComponent<npc01>();
+
     }
 
     // Update is called once per frame

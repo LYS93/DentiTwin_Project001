@@ -22,6 +22,7 @@ public class npc01 : MonoBehaviour
         //대화창이 활성화 상태일때
         if(talkScreen.activeSelf)
         {
+            Debug.Log("뭐가 문제야");
             npcText.text = "대화를 종료하려면 'ESC'를 눌러주세요";
         }
         else if (!talkScreen.activeSelf) //대화창이 비활성화 상태일때
