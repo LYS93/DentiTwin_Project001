@@ -20,7 +20,7 @@ public class talkbox01 : MonoBehaviour
 
     void Start()
     {
-        // dialogCanvas.SetActive(false);  // 처음엔 대화창을 비활성화
+        dialogCanvas.SetActive(false);  // 처음엔 대화창을 비활성화
     }
 
     void Update()
@@ -62,10 +62,6 @@ public class talkbox01 : MonoBehaviour
                 // 새로운 코루틴 실행
                 typingCoroutine = StartCoroutine(TypeText());  // 다음 메시지 출력 시작
             }
-            // else
-            // {
-            //     Debug.Log("모든 메시지가 출력되었습니다.");  // 모든 메시지 출력 완료
-            // }
         }
 
         // 대화창이 닫히면 초기 상태로 되돌림

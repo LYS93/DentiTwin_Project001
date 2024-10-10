@@ -561,6 +561,10 @@ PrefabInstance:
         \uC88B\uC544\uC694 \uBBF8\uB2C8\uAC8C\uC784\uC73C\uB85C \uBCF4\uB0B4\uC8FC\uC138\uC694\r\n\r\n-\uB300\uD654\uB05D-"
       objectReference: {fileID: 0}
     - target: {fileID: 2614816827121617400, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: npcRole
+      value: nurse
+      objectReference: {fileID: 0}
+    - target: {fileID: 2614816827121617400, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
       propertyPath: npcText
       value: 
       objectReference: {fileID: 585761880}
@@ -568,6 +572,10 @@ PrefabInstance:
       propertyPath: talkScreen
       value: 
       objectReference: {fileID: 895651542}
+    - target: {fileID: 2614816827121617400, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: wrongOrderMessage
+      value: 
+      objectReference: {fileID: 1008791255}
     - target: {fileID: 2972035599409959194, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
       propertyPath: m_Name
       value: NPC_nurse01
@@ -1168,6 +1176,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+--- !u!114 &1008791255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2773500626120202228, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+  m_PrefabInstance: {fileID: 1008791254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1008791256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8889153381358298794, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
@@ -2479,6 +2498,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9052312050696202051, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+      propertyPath: npcRole
+      value: doctor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052312050696202051, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
       propertyPath: npcText
       value: 
       objectReference: {fileID: 585761880}
@@ -2486,6 +2509,10 @@ PrefabInstance:
       propertyPath: talkScreen
       value: 
       objectReference: {fileID: 1529528959}
+    - target: {fileID: 9052312050696202051, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+      propertyPath: wrongOrderMessage
+      value: 
+      objectReference: {fileID: 1008791255}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3005,6 +3032,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 19237696142483295, guid: cc9603ff3401a874789c134a4e196517, type: 3}
+      propertyPath: npcRole
+      value: reception
+      objectReference: {fileID: 0}
+    - target: {fileID: 19237696142483295, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: npcText
       value: 
       objectReference: {fileID: 585761880}
@@ -3012,6 +3043,10 @@ PrefabInstance:
       propertyPath: talkScreen
       value: 
       objectReference: {fileID: 1897374436}
+    - target: {fileID: 19237696142483295, guid: cc9603ff3401a874789c134a4e196517, type: 3}
+      propertyPath: wrongOrderMessage
+      value: 
+      objectReference: {fileID: 1008791255}
     - target: {fileID: 2897802151788365431, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
