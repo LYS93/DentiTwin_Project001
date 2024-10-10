@@ -4,35 +4,41 @@ using UnityEngine;
 
 public class player01 : MonoBehaviour
 {
-    SpriteRenderer playerSprite;
-    public float playerSpeed; //이동속도
-    Animator playerAnima;
-    bool isMoving; //움직일때
-    npc01 npcScript;
+    private SpriteRenderer playerSprite;
+    public float playerSpeed; // 이동속도
+    private Animator playerAnima;
+    private bool isMoving; // 움직일 때
+    public npc01[] npcScripts; // 여러 NPC의 스크립트 배열
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         playerSprite = GetComponent<SpriteRenderer>();
         playerAnima = GetComponent<Animator>();
-        npcScript = GameObject.Find("Collider").GetComponent<npc01>();
-
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         isMoving = false;
 
-        //대화창이 활성화되면 이동중지
-        if (!npcScript.talkScreen.activeSelf)
+        // 대화창이 모두 비활성화되어 있을 때만 이동 가능
+        bool isAnyTalkScreenActive = false;
+        for (int i = 0; i < npcScripts.Length; i++)
         {
-            //애니메이션 재생
-            playerAnima.speed = 1;
+            if (npcScripts[i].talkScreen.activeSelf)
+            {
+                isAnyTalkScreenActive = true;
+                break;
+            }
+        }
+
+        // 대화창이 비활성화된 경우에만 이동
+        if (!isAnyTalkScreenActive)
+        {
             // 오른쪽 이동
             if (Input.GetKey(KeyCode.D))
             {
@@ -53,7 +59,7 @@ public class player01 : MonoBehaviour
                 playerAnima.SetBool("down", false);
                 isMoving = true;
             }
-            // 위 이동
+            // 위로 이동
             else if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(0, Time.fixedDeltaTime * playerSpeed, 0);
@@ -62,7 +68,7 @@ public class player01 : MonoBehaviour
                 playerAnima.SetBool("down", false);
                 isMoving = true;
             }
-            // 아래 이동
+            // 아래로 이동
             else if (Input.GetKey(KeyCode.S))
             {
                 transform.Translate(0, -Time.fixedDeltaTime * playerSpeed, 0);
@@ -79,31 +85,17 @@ public class player01 : MonoBehaviour
                 playerAnima.SetBool("up", false);
                 playerAnima.SetBool("down", false);
             }
-
-            // 키를 놓았을 때 애니메이션 상태 변경
-            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
-            {
-                playerAnima.SetBool("right", false);
-            }
-            if (Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                playerAnima.SetBool("up", false);
-            }
-            if (Input.GetKeyUp(KeyCode.DownArrow))
-            {
-                playerAnima.SetBool("down", false);
-            }
         }
-        
-        //대화창이 활성화 상태일때
-        if (npcScript.talkScreen.activeSelf)
+        else
         {
-            playerAnima.speed = 0;//애니메이션 중지
+            // 대화창이 활성화되어 있으면 애니메이션 멈춤
+            playerAnima.speed = 0;
         }
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("wall"))
+        if (collision.gameObject.CompareTag("wall"))
         {
             playerSprite.sortingOrder = 7;
         }
@@ -112,6 +104,7 @@ public class player01 : MonoBehaviour
             playerSprite.sortingOrder = 2;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("wall"))

@@ -7,85 +7,82 @@ using UnityEngine.UI;
 public class start01 : MonoBehaviour
 {
     public GameObject optionsPanel; // 옵션 패널
-    public Button[] buttons; //옵션 패널 이외의 버튼
-    float restart;//다시 시작할때
-    public GameObject startScreen;//시작스크린
-    public npc01 npcTalk; //대화창
+    public Button[] buttons; // 버튼 배열
+    public GameObject startScreen; // 시작 스크린
+    public GameObject[] npcTalkScreens; // 세 명의 NPC 대화창 배열
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        
-        // 시작 시 옵션 패널을 비활성화
         optionsPanel.SetActive(false);
     }
+
     void Start()
     {
-
-        npcTalk = GameObject.Find("Collider").GetComponent<npc01>();
-       
-        //시작스크린이 없을때
-        if(startScreen == null)
+        // 시작 스크린이 없을 때 Restart 키 초기화
+        if (startScreen == null)
         {
-            PlayerPrefs.DeleteKey("Restart");//Restart값 초기화
+            PlayerPrefs.DeleteKey("Restart");
         }
     }
+
     void Update()
     {
-        // 옵션 패널의 활성화 상태에 따라 버튼 상태 변경
-        bool isActive = optionsPanel.activeSelf;
-        bool isActive2 = npcTalk.talkScreen.activeSelf;
+        bool isAnyTalkScreenActive = false;
 
-        // 버튼 배열을 순회하며 interactable 속성 설정
-        for (int i = 0; i < buttons.Length; i++)
+        // 세 NPC의 대화창이 열려 있는지 확인
+        for (int i = 0; i < npcTalkScreens.Length; i++)
         {
-            buttons[i].interactable = !isActive; // 옵션 패널이 활성화되면 버튼 비활성화
+            if (npcTalkScreens[i].activeSelf)
+            {
+                isAnyTalkScreenActive = true;
+                break;
+            }
         }
+
+        // 옵션 패널이나 대화창이 열려 있을 때 버튼 비활성화
+        bool isOptionsActive = optionsPanel.activeSelf;
+
         for (int i = 0; i < buttons.Length; i++)
         {
-            buttons[i].interactable = !isActive2; // 옵션 패널이 활성화되면 버튼 비활성화
+            buttons[i].interactable = !isOptionsActive && !isAnyTalkScreenActive;
         }
     }
+
     public void OnOptions()
     {
-        // 옵션 패널을 활성화
         optionsPanel.SetActive(true);
     }
 
     public void OffOptions()
     {
-        // 옵션 패널을 비활성화
         optionsPanel.SetActive(false);
     }
+
     public void doc_scene()
     {
-        // 의사 씬으로 전환
         SceneManager.LoadScene("DoctorScene");
     }
+
     public void pat_scene()
     {
-        // 환자 씬으로 전환
         SceneManager.LoadScene("PatientScene");
     }
+
     public void back()
     {
-        //시작 씬으로 전환
         SceneManager.LoadScene("StartScene");
-        //재시작에는 시작스크린이 안뜨도록
-        restart += 1f;
-        PlayerPrefs.SetFloat("Restart", restart);
+        PlayerPrefs.SetFloat("Restart", PlayerPrefs.GetFloat("Restart", 0) + 1f);
     }
+
     public void Quit()
     {
-        //게임종료
         Application.Quit();
-        
-        PlayerPrefs.DeleteAll(); // 모든 PlayerPrefs 삭제
-        PlayerPrefs.Save(); // 변경사항 저장
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
 
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // 에디터에서는 플레이 모드 종료
+        UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }
-
 }
