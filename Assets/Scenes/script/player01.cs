@@ -78,19 +78,14 @@ public class player01 : MonoBehaviour
                 isMoving = true;
             }
 
-            // 이동하지 않을 때 애니메이션 상태 변경
+            //이동하지 않을 때 애니메이션 상태 변경
             if (!isMoving)
             {
                 playerAnima.SetBool("right", false);
                 playerAnima.SetBool("up", false);
                 playerAnima.SetBool("down", false);
             }
-        }
-        else
-        {
-            // 대화창이 활성화되어 있으면 애니메이션 멈춤
-            playerAnima.speed = 0;
-        }
+        }        
     }
 
     private void OnTriggerStay2D(Collider2D collision)

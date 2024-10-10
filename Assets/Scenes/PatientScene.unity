@@ -537,6 +537,25 @@ PrefabInstance:
       propertyPath: dialogCanvas
       value: 
       objectReference: {fileID: 895651542}
+    - target: {fileID: 1980225425627167748, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980225425627167748, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: "<color=orange><size=80>\uAC04\uD638\uC0AC</size></color>\r\n\uB9DE\uC544\uC694
+        \uC81C\uAC00 \uAC04\uD638\uC0AC\uC785\uB2C8\uB2E4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980225425627167748, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: "<color=orange><size=80>\uAC04\uD638\uC0AC</size></color>\r\n\uC784\uD50C\uB780\uD2B8
+        \uACFC\uC815\uC744 \uBCF4\uB7EC \uBBF8\uB2C8\uAC8C\uC784\uC73C\uB85C \uAC00\uC2E4\uAE4C\uC694?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980225425627167748, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: "<color=yellow><size=80>\uC758\uC0AC(\uBC29\uBB38\uAC1D)</size></color>\r\n\uB124
+        \uC88B\uC544\uC694 \uBBF8\uB2C8\uAC8C\uC784\uC73C\uB85C \uBCF4\uB0B4\uC8FC\uC138\uC694\r\n\r\n-\uB300\uD654\uB05D-"
+      objectReference: {fileID: 0}
     - target: {fileID: 2614816827121617400, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
       propertyPath: npcText
       value: 
@@ -1859,7 +1878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6369338474a83b34db585fdd0a88e88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 6
   npcScripts:
   - {fileID: 1829887507}
   - {fileID: 400974546}
@@ -2398,6 +2417,11 @@ PrefabInstance:
       propertyPath: dialogCanvas
       value: 
       objectReference: {fileID: 1529528959}
+    - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+      propertyPath: messages.Array.data[5]
+      value: "<color=navy><size=80>\uC758\uC0AC(\uB124\uC624)</size></color>\n\uADF8\uB7FC
+        \uAC04\uD638\uC0AC\uB97C \uCC3E\uC544\uAC00 \uBCF4\uC138\uC694\n\n-\uB300\uD654\uB05D-"
+      objectReference: {fileID: 0}
     - target: {fileID: 7467509486837466682, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
       propertyPath: m_Name
       value: NPC_doctor01
@@ -3024,6 +3048,20 @@ PrefabInstance:
       propertyPath: dialogCanvas
       value: 
       objectReference: {fileID: 1897374436}
+    - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
+      propertyPath: messages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: "\r<color=lime><size=80>\uB9AC\uC149\uC158</size></color>\r\n\uB124\uC624
+        \uBC14\uC774\uC624\uD14D\uC5D0 \uC798 \uC624\uC168\uC2B5\uB2C8\uB2E4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: "<color=lime><size=80>\uB9AC\uC149\uC158</size></color>\r\n\uC67C\uCABD
+        \uC544\uB798\uC758 \uC9C4\uB8CC\uC2E4\uB85C \uAC00\uC2DC\uC8E0\r\n\r\n-\uB300\uD654\uB05D-"
+      objectReference: {fileID: 0}
     - target: {fileID: 4710152823286108986, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: m_Name
       value: NPC_reception01
