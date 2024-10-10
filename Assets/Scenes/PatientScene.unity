@@ -534,6 +534,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 895651541}
     - target: {fileID: 1980225425627167748, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: npcType
+      value: NPC_nurse01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980225425627167748, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
       propertyPath: dialogCanvas
       value: 
       objectReference: {fileID: 895651542}
@@ -2383,7 +2387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 544eed654ed53fa48a33660af519c811, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e70a967b32cd504a9a33c6b117cd768, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2414,9 +2418,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1529528958}
     - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+      propertyPath: npcType
+      value: NPC_doctor01
+      objectReference: {fileID: 0}
+    - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
       propertyPath: dialogCanvas
       value: 
       objectReference: {fileID: 1529528959}
+    - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+      propertyPath: hasTalkedToDoctor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
       propertyPath: messages.Array.data[5]
       value: "<color=navy><size=80>\uC758\uC0AC(\uB124\uC624)</size></color>\n\uADF8\uB7FC
@@ -3045,12 +3057,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1897374435}
     - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
+      propertyPath: npcType
+      value: NPC_reception01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: dialogCanvas
       value: 
       objectReference: {fileID: 1897374436}
     - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: messages.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
+      propertyPath: hasTalkedToReception
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: messages.Array.data[0]
