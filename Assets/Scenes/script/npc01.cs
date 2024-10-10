@@ -17,7 +17,6 @@ public class npc01 : MonoBehaviour
 
     public string npcRole; // NPC의 역할 ("reception", "doctor", "nurse")
 
-    private float wrongOrderMessageTimer; // 타이머
     private bool showWrongOrderMessage; // 잘못된 메시지를 표시할지 여부
 
     void Start()
@@ -61,7 +60,6 @@ public class npc01 : MonoBehaviour
                     showWrongOrderMessage = true; // 잘못된 대화 시도
                     wrongOrderMessage.text = "순서에 맞는 NPC와 먼저 대화하세요.";
                     wrongOrderMessage.enabled = true; // 메시지 활성화
-                    wrongOrderMessageTimer = 3.0f; // 타이머 초기화
                 }
             }
 
@@ -84,18 +82,7 @@ public class npc01 : MonoBehaviour
                     isNurseTalkCompleted = true;
                 }
             }
-        }
-
-        // 잘못된 대화 메시지 타이머 관리
-        if (showWrongOrderMessage)
-        {
-            wrongOrderMessageTimer -= Time.deltaTime; // 타이머 감소
-            if (wrongOrderMessageTimer <= 0)
-            {
-                wrongOrderMessage.enabled = false; // 메시지 비활성화
-                showWrongOrderMessage = false; // 상태 초기화
-            }
-        }
+        }        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
