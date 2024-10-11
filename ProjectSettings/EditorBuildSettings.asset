@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PatientScene.unity
     guid: 0975567569c789744ad7845c2d94c2ab
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: f7133e3f9662cff45b633347a66a6830
+  - enabled: 1
+    path: Assets/Scenes/MiniGameScene.unity
+    guid: 20ae4b8daa108264b9abfa82036c25c3
   m_configObjects: {}
