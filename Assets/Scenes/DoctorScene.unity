@@ -1036,6 +1036,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac8a9bbcc6a16243b0379ab4a822555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1799775896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 645743307327023829, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+  m_PrefabInstance: {fileID: 8526273599161493781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2016391568 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2614816827121617400, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
@@ -2401,6 +2406,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7003632567870153458}
     - target: {fileID: 2614816827121617400, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
+      propertyPath: buttonPanel
+      value: 
+      objectReference: {fileID: 1799775896}
+    - target: {fileID: 2614816827121617400, guid: e69f278c5f1dae343ade76da70ba0a05, type: 3}
       propertyPath: wrongOrderMessage
       value: 
       objectReference: {fileID: 8526273599161493783}
@@ -2802,6 +2811,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_button
       objectReference: {fileID: 0}
+    - target: {fileID: 3252060868665586307, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2016391568}
+    - target: {fileID: 3252060868665586307, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartMiniGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252060868665586307, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: npc01, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252060868665586307, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4429136835116573813, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -2890,6 +2915,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1157787939}
+    - target: {fileID: 5217416409210518224, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217416409210518224, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217416409210518224, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2016391568}
+    - target: {fileID: 5217416409210518224, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217416409210518224, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CancelMiniGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217416409210518224, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: npc01, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217416409210518224, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6920920688076906700, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
       propertyPath: m_Name
       value: press_the_button

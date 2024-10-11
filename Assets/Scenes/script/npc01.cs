@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class npc01 : MonoBehaviour
 {
     public Text npcText; // NPC 머리위의 텍스트
     public GameObject talkScreen; // 대화창
-    private bool playerIn; // 플레이어 범위 판정
+    public GameObject buttonPanel; // 버튼 패널 (미니게임 여부 확인)
     public Text wrongOrderMessage; // 잘못된 대화 순서 메시지 텍스트
+    private bool playerIn; // 플레이어 범위 판정
 
-    // 대화 순서 제어를 위한 정적 변수들
-    public static bool isReceptionistTalkCompleted = false; // 리셉션 NPC 대화 완료 여부
-    public static bool isDoctorTalkCompleted = false; // 의사 NPC 대화 완료 여부
-    public static bool isNurseTalkCompleted = false; // 간호사 NPC 대화 완료 여부
+    public static bool isReceptionistTalkCompleted = false;
+    public static bool isDoctorTalkCompleted = false;
+    public static bool isNurseTalkCompleted = false;
 
     public string npcRole; // NPC의 역할 ("reception", "doctor", "nurse")
 
@@ -23,7 +24,13 @@ public class npc01 : MonoBehaviour
     {
         npcText.enabled = false;
         talkScreen.SetActive(false);
-        wrongOrderMessage.enabled = false; // 메시지 처음에 비활성화
+        buttonPanel.SetActive(false); // 처음에는 버튼 패널을 비활성화
+        wrongOrderMessage.enabled = false; // 잘못된 대화 순서 메시지 비활성화
+
+        // 씬 시작 시 대화 순서 상태 초기화
+        isReceptionistTalkCompleted = false;
+        isDoctorTalkCompleted = false;
+        isNurseTalkCompleted = false;
     }
 
     void Update()
@@ -59,7 +66,7 @@ public class npc01 : MonoBehaviour
                 {
                     showWrongOrderMessage = true; // 잘못된 대화 시도
                     wrongOrderMessage.text = "순서에 맞는 NPC와 먼저 대화하세요.";
-                    wrongOrderMessage.enabled = true; // 메시지 활성화
+                    wrongOrderMessage.enabled = true; // 잘못된 대화 순서 메시지 활성화
                 }
             }
 
@@ -80,9 +87,12 @@ public class npc01 : MonoBehaviour
                 else if (npcRole == "nurse")
                 {
                     isNurseTalkCompleted = true;
+
+                    // 간호사 대화가 끝나면 버튼 패널을 활성화
+                    buttonPanel.SetActive(true);
                 }
             }
-        }        
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -100,8 +110,21 @@ public class npc01 : MonoBehaviour
         {
             npcText.enabled = false;
             playerIn = false;
-            talkScreen.SetActive(false); // 범위를 벗어날 때 대화창 닫기
-            wrongOrderMessage.enabled = false; // NPC를 떠날 때 잘못된 대화 메시지 비활성화
+            talkScreen.SetActive(false);
+            wrongOrderMessage.enabled = false; // 범위를 벗어나면 잘못된 대화 순서 메시지 비활성화
+            buttonPanel.SetActive(false); // NPC를 떠나면 버튼 패널도 비활성화
         }
+    }
+
+    // 1. 미니게임으로 넘어가는 버튼 메서드
+    public void StartMiniGame()
+    {
+        SceneManager.LoadScene("MiniGameScene"); // "MiniGameScene"을 미니게임 씬의 이름으로 변경
+    }
+
+    // 2. 취소 버튼 메서드
+    public void CancelMiniGame()
+    {
+        buttonPanel.SetActive(false); // 버튼 패널 비활성화
     }
 }
