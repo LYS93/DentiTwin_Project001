@@ -28,6 +28,7 @@ public class Player_Script : MonoBehaviour
     public float run_speed;
 
     bool loadsceneend;
+    float endtimer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -54,19 +55,22 @@ public class Player_Script : MonoBehaviour
     {
         if (!isGoal)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) && isJump == false) // 위쪽 화살표 누를때 점프 && 2단점프 막기.
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) // 위쪽 화살표 누를때 점프 && 2단점프 막기.
             {
-                myAnim.SetBool("Jump", true);
-                myRigid.velocity = jump_speed * Vector3.up;
-                isJump = true;
+                if (isJump == false)
+                {
+                    myAnim.SetBool("Jump", true);
+                    myRigid.velocity = jump_speed * Vector3.up;
+                    isJump = true;
+                }
             }
-            if (Input.GetKey(KeyCode.RightArrow)) // 오른 화살표 누를 때 오른쪽으로 달리기.
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) // 오른 화살표 누를 때 오른쪽으로 달리기.
             {
                 mySr.flipX = false;
                 myAnim.SetBool("Run", true);
                 transform.Translate(run_speed * Time.deltaTime, 0, 0);
             }
-            else if (Input.GetKey(KeyCode.LeftArrow)) // 왼 화살표 누를 때 왼쪽으로 달리기.
+            else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) // 왼 화살표 누를 때 왼쪽으로 달리기.
             {
                 mySr.flipX = true;
                 myAnim.SetBool("Run", true);
@@ -80,7 +84,12 @@ public class Player_Script : MonoBehaviour
 
         if(loadsceneend)
         {
-            SceneManager.LoadScene("EndScene");
+            endtimer += Time.deltaTime;
+            if (endtimer >= 3)
+            {
+                SceneManager.LoadScene("EndScene");
+                endtimer = 0;
+            }
         }
 
     }
