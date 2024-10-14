@@ -5,33 +5,52 @@ using UnityEngine.UI;
 
 public class ending01 : MonoBehaviour
 {
-    public Text uiText;  // 출력할 UI 텍스트 컴포넌트
-    [TextArea]
-    public string message;  // 출력할 문자열
-    public float typingSpeed = 0.1f;  // 글자 나타나는 속도 (초 단위)
+    public RectTransform textTransform; // UI 텍스트의 RectTransform
+    public Text uiText; // UI Text 컴포넌트
+    public float speed = 300f; // 텍스트가 움직이는 속도
 
-    private void Start()
+    [TextArea] // 인스펙터에서 여러 줄의 텍스트를 입력할 수 있게 설정
+    public string[] messages; // 표시할 텍스트 배열
+    private int currentMessageIndex = 0; // 현재 표시 중인 텍스트 인덱스
+
+    public bool isLastMessageDisplayed = false; // 마지막 메시지 표시 여부
+
+    void Start()
     {
-        // 초기화: 텍스트를 비워둠
-        uiText.text = "";
-
-        // 코루틴 시작: 글자를 한 번에 하나씩 출력
-        StartCoroutine(ShowText());
+        // 처음 텍스트 설정
+        uiText.text = messages[currentMessageIndex];
     }
 
-    // 코루틴: 한 글자씩 텍스트를 출력하는 함수
-    IEnumerator ShowText()
+    void Update()
     {
-        foreach (char letter in message)
+        // 마지막 메시지가 표시된 경우, 텍스트를 더 이상 이동하지 않음
+        if (isLastMessageDisplayed)
         {
-            uiText.text += letter;  // 한 글자씩 추가
-            yield return new WaitForSeconds(typingSpeed);  // 지정된 시간만큼 대기
+            return; // Update 메서드 종료
         }
 
-        // 모든 글자가 출력된 후 10초 대기
-        yield return new WaitForSeconds(10f);
+        // 현재 위치에서 왼쪽으로 이동
+        textTransform.anchoredPosition += Vector2.left * speed * Time.deltaTime;
 
-        // 게임 종료
-        Application.Quit();  // 게임 종료
+        // 텍스트가 화면 왼쪽 밖으로 나갔을 때
+        if (textTransform.anchoredPosition.x < -Screen.width)
+        {
+            // 오른쪽으로 다시 보내기
+            textTransform.anchoredPosition = new Vector2(Screen.width, textTransform.anchoredPosition.y);
+
+            // 다음 텍스트로 변경
+            currentMessageIndex++;
+
+            // 마지막 메시지를 출력한 경우
+            if (currentMessageIndex >= messages.Length)
+            {
+                isLastMessageDisplayed = true; // bool 값을 true로 변경
+                uiText.text = ""; // 텍스트를 빈 문자열로 설정하여 더 이상 표시하지 않음
+            }
+            else
+            {
+                uiText.text = messages[currentMessageIndex]; // 다음 메시지 설정
+            }
+        }
     }
 }
