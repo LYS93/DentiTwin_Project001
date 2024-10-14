@@ -10,7 +10,7 @@ public class start01 : MonoBehaviour
     public Button[] buttons; // 버튼 배열
     public GameObject startScreen; // 시작 스크린
     public GameObject[] npcTalkScreens; // 세 명의 NPC 대화창 배열
-
+    
     private void Awake()
     {
         Application.targetFrameRate = 60;
