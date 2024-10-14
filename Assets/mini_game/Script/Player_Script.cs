@@ -16,7 +16,7 @@ public class Player_Script : MonoBehaviour
     public GameObject T_Guide; //instantiate 생성을 위한 저장공간. > 가이드
     public GameObject Drill; //instantiate 생성 위한 저장공간. > 드릴
     public GameObject Implant; //instantiate 생성 위한 저장공간. > 임플란트 보철물
-    AudioSource myAudio;
+    //AudioSource myAudio;
 
     bool isJump = false;
     bool isTG_out = false;
@@ -45,9 +45,9 @@ public class Player_Script : MonoBehaviour
         //Empty_Col = GameObject.Find("col_verdict").GetComponent<BoxCollider2D>();
         transform.position = new Vector3(-7, -2, 0);
 
-        myAudio = GetComponent<AudioSource>();
-        myAudio.volume =  0.4f;
-        myAudio.Play();
+        //myAudio = GetComponent<AudioSource>();
+        //myAudio.volume =  0.4f;
+        //myAudio.Play();
     }
 
     // Update is called once per frame
