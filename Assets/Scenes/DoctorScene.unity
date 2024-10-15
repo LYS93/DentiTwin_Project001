@@ -1781,6 +1781,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4970690578834640223, guid: 0d4f97f739e5e1a4cb3958429aa5243e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b99978be2e9c7d4c8d42ad3f2cc958c, type: 3}
     - target: {fileID: 7859300280791997178, guid: 0d4f97f739e5e1a4cb3958429aa5243e, type: 3}
       propertyPath: m_Name
       value: Canvas_talk03
@@ -2839,6 +2843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_talk02
       objectReference: {fileID: 0}
+    - target: {fileID: 6293267742346603674, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e97b1361cf3edd4e9890d0d48c68a8b, type: 3}
     - target: {fileID: 8180733362781616954, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
       propertyPath: m_Pivot.x
       value: 0

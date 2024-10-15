@@ -935,6 +935,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_talk02
       objectReference: {fileID: 0}
+    - target: {fileID: 5248204810430185037, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1950
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248204810430185037, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293267742346603674, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0b8306568c089b4aad544edabeb4d90, type: 3}
     - target: {fileID: 8180733362781616954, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2580,6 +2592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_talk01
       objectReference: {fileID: 0}
+    - target: {fileID: 7931321984981400147, guid: 0fdb1d43d9326934e9027ded08eff26a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 414abead18b0f3046bbdce38080d7985, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3018,9 +3034,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4970690578834640223, guid: 0d4f97f739e5e1a4cb3958429aa5243e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33bbb3ddecd3fd142b7930ba8ab68325, type: 3}
     - target: {fileID: 7859300280791997178, guid: 0d4f97f739e5e1a4cb3958429aa5243e, type: 3}
       propertyPath: m_Name
       value: Canvas_talk03
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129371626919613562, guid: 0d4f97f739e5e1a4cb3958429aa5243e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

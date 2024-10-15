@@ -14,7 +14,7 @@ public class scenestart01 : MonoBehaviour
     void Update()
     {
         //사용자가 스페이스바키를 눌렀을 때
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
             Destroy(gameObject, 0.5f); // 이 GameObject를 파괴
         }

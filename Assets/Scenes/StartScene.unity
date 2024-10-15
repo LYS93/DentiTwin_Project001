@@ -498,6 +498,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &294999562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 52343500950571214, guid: 41cf05909be77454d9b1c2f797ac78fc, type: 3}
+  m_PrefabInstance: {fileID: 5273738075043661611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &368071641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +2763,7 @@ PrefabInstance:
     - target: {fileID: 52343500950571214, guid: 41cf05909be77454d9b1c2f797ac78fc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 61284fc813bd2b746b5758575aa062f1, type: 3}
+      objectReference: {fileID: 21300000, guid: fab3989749c6b174e8b98da5dd402595, type: 3}
     - target: {fileID: 882243530512357487, guid: 41cf05909be77454d9b1c2f797ac78fc, type: 3}
       propertyPath: m_Name
       value: Canvas_sound
@@ -2765,6 +2776,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: e4419b26e2884d847b9a07df99a9a1e6, type: 3}
+    - target: {fileID: 1767237299180106994, guid: 41cf05909be77454d9b1c2f797ac78fc, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 294999562}
     - target: {fileID: 1767237299180106994, guid: 41cf05909be77454d9b1c2f797ac78fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

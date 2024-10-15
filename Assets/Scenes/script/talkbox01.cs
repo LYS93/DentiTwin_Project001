@@ -45,7 +45,7 @@ public class talkbox01 : MonoBehaviour
         }
 
         // 메시지가 출력 완료된 후, 스페이스바나 마우스 왼쪽 버튼을 누르면 다음 메시지로 이동
-        if (messageCompleted && !isTyping && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        if (messageCompleted && !isTyping && Input.GetKeyDown(KeyCode.Space))
         {
             if (currentMessageIndex < messages.Length - 1)  // 마지막 메시지가 아니라면
             {

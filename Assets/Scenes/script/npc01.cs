@@ -40,7 +40,7 @@ public class npc01 : MonoBehaviour
             // 대화 화면에 메시지 표시
             if (talkScreen.activeSelf)
             {
-                npcText.text = "다음 대화는 '스페이스바'혹은 '마우스'를 눌러주세요\n대화를 그만 하시려면 'ESC'를 눌러주세요";
+                npcText.text = "'스페이스바'를 눌러 대화를 넘겨주세요\n대화를 그만 하시려면 'ESC'를 눌러주세요";
             }
             else
             {
