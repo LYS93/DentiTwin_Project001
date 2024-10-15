@@ -33,10 +33,10 @@ public class ending01 : MonoBehaviour
         textTransform.anchoredPosition += Vector2.left * speed * Time.deltaTime;
 
         // 텍스트가 화면 왼쪽 밖으로 나갔을 때
-        if (textTransform.anchoredPosition.x < -Screen.width * 0.85f)
+        if (textTransform.anchoredPosition.x < -Screen.width * 0.82f)
         {
             // 오른쪽으로 다시 보내기
-            textTransform.anchoredPosition = new Vector2(Screen.width * 0.85f, textTransform.anchoredPosition.y);
+            textTransform.anchoredPosition = new Vector2(Screen.width * 0.82f, textTransform.anchoredPosition.y);
 
             // 다음 텍스트로 변경
             currentMessageIndex++;

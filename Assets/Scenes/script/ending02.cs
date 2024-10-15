@@ -13,6 +13,7 @@ public class ending02 : MonoBehaviour
     private CanvasGroup newCanvasGroup; // 새 Canvas의 CanvasGroup
     private bool isNewCanvasFadingIn = false; // 새 Canvas의 페이드 상태 체크
     private bool isGameEnding = false; // 게임 종료 상태 체크
+    public AudioSource endAudio;
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class ending02 : MonoBehaviour
             if (canvasGroup.alpha < 1f)
             {
                 canvasGroup.alpha += Time.deltaTime / fadeDuration; // 서서히 불투명해짐
+                endAudio.volume -= Time.deltaTime / fadeDuration * 1.2f;
             }
             else if (!isNewCanvasFadingIn)
             {
