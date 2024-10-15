@@ -1444,11 +1444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: messages.Array.data[1]
-      value: "<color=lime><size=80>\uB9AC\uC149\uC158</size></color>\n\uBC18\uAC11\uC2B5\uB2C8\uB2E4."
+      value: "<color=lime><size=80>\uC6D0\uBB34\uACFC</size></color>\n\uBC18\uAC11\uC2B5\uB2C8\uB2E4."
       objectReference: {fileID: 0}
     - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: messages.Array.data[2]
-      value: "<color=lime><size=80>\uB9AC\uC149\uC158</size></color>\n\uC120\uC0DD\uB2D8\uAED8\uC11C
+      value: "<color=lime><size=80>\uC6D0\uBB34\uACFC</size></color>\n\uC120\uC0DD\uB2D8\uAED8\uC11C
         \uAE30\uB2E4\uB9AC\uACE0 \uACC4\uC2ED\uB2C8\uB2E4.\r\n\uC67C\uCABD \uC544\uB798
         \uC9C4\uB8CC\uC2E4\uB85C \uAC00\uC2DC\uBA74 \uB429\uB2C8\uB2E4.\n-\uB300\uD654\uB05D-"
       objectReference: {fileID: 0}

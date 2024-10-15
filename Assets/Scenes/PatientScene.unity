@@ -3453,7 +3453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: messages.Array.data[0]
-      value: "\r<color=lime><size=80>\uB9AC\uC149\uC158</size></color>\r\n\uC5B4\uC11C\uC624\uC138\uC694
+      value: "\r<color=lime><size=80>\uC6D0\uBB34\uACFC</size></color>\r\n\uC5B4\uC11C\uC624\uC138\uC694
         \uB124\uC624\uC784\uD50C\uB780\uD2B8\uC785\uB2C8\uB2E4.\n\uC5B4\uB5A4 \uBD88\uD3B8\uD568\uC774
         \uC788\uC73C\uC2E0\uAC00\uC694?"
       objectReference: {fileID: 0}
@@ -3464,7 +3464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3980043055249513289, guid: cc9603ff3401a874789c134a4e196517, type: 3}
       propertyPath: messages.Array.data[2]
-      value: "<color=lime><size=80>\uB9AC\uC149\uC158</size></color>\r\n\uC798 \uC624\uC168\uC5B4\uC694.\n\uC67C\uCABD
+      value: "<color=lime><size=80>\uC6D0\uBB34\uACFC</size></color>\r\n\uC798 \uC624\uC168\uC5B4\uC694.\n\uC67C\uCABD
         \uC544\uB798\uC758 \uC9C4\uB8CC\uC2E4\uB85C \uAC00\uC2DC\uC8E0.\r\n-\uB300\uD654\uB05D-"
       objectReference: {fileID: 0}
     - target: {fileID: 4710152823286108986, guid: cc9603ff3401a874789c134a4e196517, type: 3}

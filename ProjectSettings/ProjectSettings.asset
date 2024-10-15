@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DentiTwin
   productName: DentiTwin
-  defaultCursor: {fileID: 2800000, guid: 949be46201a11074ea4fc35ce34b33c8, type: 3}
+  defaultCursor: {fileID: 2800000, guid: bad8c589a2a002a4dbd0b476c712c00d, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
