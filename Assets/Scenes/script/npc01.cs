@@ -40,7 +40,7 @@ public class npc01 : MonoBehaviour
             // 대화 화면에 메시지 표시
             if (talkScreen.activeSelf)
             {
-                npcText.text = "대화를 종료하려면 'ESC'를 눌러주세요";
+                npcText.text = "다음 대화는 '스페이스바'혹은 '마우스'를 눌러주세요\n대화를 그만 하시려면 'ESC'를 눌러주세요";
             }
             else
             {
@@ -65,7 +65,7 @@ public class npc01 : MonoBehaviour
                 else
                 {
                     showWrongOrderMessage = true; // 잘못된 대화 시도
-                    wrongOrderMessage.text = "순서에 맞는 NPC와 먼저 대화하세요.";
+                    wrongOrderMessage.text = "원무과-의사-간호사 순서로 대화를 해주세요";
                     wrongOrderMessage.enabled = true; // 잘못된 대화 순서 메시지 활성화
                 }
             }

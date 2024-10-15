@@ -55,7 +55,7 @@ public class Player_Script : MonoBehaviour
     {
         if (!isGoal)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) // 위쪽 화살표 누를때 점프 && 2단점프 막기.
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) // 위쪽 화살표 누를때 점프 && 2단점프 막기.
             {
                 if (isJump == false)
                 {
@@ -64,13 +64,13 @@ public class Player_Script : MonoBehaviour
                     isJump = true;
                 }
             }
-            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) // 오른 화살표 누를 때 오른쪽으로 달리기.
+            if (Input.GetKey(KeyCode.D)) // 오른 화살표 누를 때 오른쪽으로 달리기.
             {
                 mySr.flipX = false;
                 myAnim.SetBool("Run", true);
                 transform.Translate(run_speed * Time.deltaTime, 0, 0);
             }
-            else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) // 왼 화살표 누를 때 왼쪽으로 달리기.
+            else if (Input.GetKey(KeyCode.A)) // 왼 화살표 누를 때 왼쪽으로 달리기.
             {
                 mySr.flipX = true;
                 myAnim.SetBool("Run", true);
