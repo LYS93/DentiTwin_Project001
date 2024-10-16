@@ -16039,6 +16039,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnOptions
       objectReference: {fileID: 0}
+    - target: {fileID: 1947719377581217096, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a5b87995e478ae54a93302556e54c6e2, type: 3}
     - target: {fileID: 2098092083830662052, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
       propertyPath: m_Name
       value: Canvas_button
@@ -16131,6 +16135,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 6841163857725297013, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 685b81f739395524280ee7100ea83a74, type: 3}
+    - target: {fileID: 8471928200649051403, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93285ffb4f413544e943e75b8fdbe04b, type: 3}
     - target: {fileID: 8889153381358298794, guid: bd58d234477fbe843bf35623ad49be1c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
