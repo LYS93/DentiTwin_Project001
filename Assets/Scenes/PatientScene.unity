@@ -918,7 +918,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 9.3, z: 0}
-  m_LocalScale: {x: 4, y: 3, z: 1}
+  m_LocalScale: {x: 3.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -946,7 +946,7 @@ PrefabInstance:
     - target: {fileID: 6293267742346603674, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0b8306568c089b4aad544edabeb4d90, type: 3}
+      objectReference: {fileID: 21300000, guid: ff36fcc52dba72c4a872d394b1caa018, type: 3}
     - target: {fileID: 8180733362781616954, guid: 964eaf3429ad28d408b0593935a8285d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1617,7 +1617,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: -1.4, z: 0}
-  m_LocalScale: {x: 4, y: 3, z: 1}
+  m_LocalScale: {x: 3.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2188,7 +2188,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.5, y: -2.7, z: 0}
-  m_LocalScale: {x: 4, y: 3, z: 1}
+  m_LocalScale: {x: 3.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2782,13 +2782,18 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: "<color=blue><size=80>\uC758\uC0AC(\uB124\uC624)</size></color>\n\uC548\uB155\uD558\uC138\uC694?
+        \uBB34\uC2A8\uC77C\uB85C \uC624\uC168\uC8E0?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
       propertyPath: messages.Array.data[1]
       value: "<color=aqua><size=80>\uD658\uC790</size></color>\n\uC800\uB294 \uB2F9\uB1E8\uC640
         \uACE0\uD608\uC555\uC774 \uC788\uB294\uB370, \uC784\uD50C\uB780\uD2B8 \uAC00\uB2A5\uD560\uAE4C\uC694?"
       objectReference: {fileID: 0}
     - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
       propertyPath: messages.Array.data[2]
-      value: "<color=navy><size=80>\uC758\uC0AC(\uB124\uC624)</size></color>\n\uB124\uC624\uC784\uD50C\uB780\uD2B8\uB294
+      value: "<color=blue><size=80>\uC758\uC0AC(\uB124\uC624)</size></color>\n\uB124\uC624\uC784\uD50C\uB780\uD2B8\uB294
         \uCD9C\uD608\uC774 \uC801\uACE0 \uAC10\uC5FC \uC608\uBC29\uC5D0 \uD6A8\uACFC\uC801\uC785\uB2C8\uB2E4.\r\n\uBB34\uC808\uAC1C
         \uC2DC\uC220\uB85C \uCD9C\uD608\uACFC \uBD93\uAE30\uAC00 \uC801\uC5B4\n\uBE60\uB978
         \uD68C\uBCF5\uC744 \uB3C4\uC640\uC90D\uB2C8\uB2E4."
@@ -2800,7 +2805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 914123391350718130, guid: 5819b9f6965b7134585316c0ecad9cb9, type: 3}
       propertyPath: messages.Array.data[4]
-      value: "<color=yellow><size=80>\uC758\uC0AC(\uBC29\uBB38\uAC1D)</size></color>\n\uC2DC\uC220
+      value: "<color=blue><size=80>\uC758\uC0AC(\uB124\uC624)</size></color>\n\uC2DC\uC220
         \uACFC\uC815\uC740 \uC704\uCABD X-Ray\uC2E4\uC758\n\uAC04\uD638\uC0AC\uAC00
         \uC790\uC138\uD788 \uC548\uB0B4\uD574 \uB4DC\uB9B4\uAC81\uB2C8\uB2E4.\n-\uB300\uD654\uB05D-"
       objectReference: {fileID: 0}
@@ -3037,7 +3042,7 @@ PrefabInstance:
     - target: {fileID: 4970690578834640223, guid: 0d4f97f739e5e1a4cb3958429aa5243e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 33bbb3ddecd3fd142b7930ba8ab68325, type: 3}
+      objectReference: {fileID: 21300000, guid: 0fe642e28d4044944aa36bed94fbabff, type: 3}
     - target: {fileID: 7859300280791997178, guid: 0d4f97f739e5e1a4cb3958429aa5243e, type: 3}
       propertyPath: m_Name
       value: Canvas_talk03
