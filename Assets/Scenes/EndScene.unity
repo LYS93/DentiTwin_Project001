@@ -344,7 +344,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Team XYZ
 
-    1st Projerct'
+    1st Project'
 --- !u!222 &321561221
 CanvasRenderer:
   m_ObjectHideFlags: 0
