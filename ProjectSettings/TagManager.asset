@@ -8,6 +8,12 @@ TagManager:
   - wall
   - wallwall
   - hospital
+  - Arrival
+  - Ground
+  - Button
+  - Pushing Object
+  - Guide
+  - Return to original state
   layers:
   - Default
   - TransparentFX

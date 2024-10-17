@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d213c7078d6fb3e4e90dbf6203209bc8
+guid: dcff438891decba429fa686ecb34b0a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gum tilemap sprite sheet_addon_160x160_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 45
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071cf573e0061ab449a08b40088ab13c
+      internalID: 330448650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gum tilemap sprite sheet_addon_160x160_1
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 45
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a5b128599e0a84aaf0d24cb5bbc95b
+      internalID: -2127883539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gum tilemap sprite sheet_addon_160x160_2
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 45
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b11e285e851984e96a95481f6ea208
+      internalID: 896422726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gum tilemap sprite sheet_addon_160x160_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 45
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1c49dd0ca17fe4d9f17ad5d0945060
+      internalID: 57202842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gum tilemap sprite sheet_addon_160x160_0: 330448650
+      gum tilemap sprite sheet_addon_160x160_1: -2127883539
+      gum tilemap sprite sheet_addon_160x160_2: 896422726
+      gum tilemap sprite sheet_addon_160x160_3: 57202842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

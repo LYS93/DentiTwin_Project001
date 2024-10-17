@@ -8,6 +8,7 @@ public class Player_Script : MonoBehaviour
     Animator myAnim; //캐릭터 애니메이션
     SpriteRenderer mySr; //좌우반전
     Rigidbody2D myRigid; //중력
+    Vector3 Run_Vector = new Vector3(1, 0, 0);
     Animator RB_Anim; //빨간 버튼 애니메이션
     Animator BB_Anim; //파란 버튼 애니메이션
     Animator YB_Anim; //노란 버튼 애니메이션
@@ -16,7 +17,10 @@ public class Player_Script : MonoBehaviour
     public GameObject T_Guide; //instantiate 생성을 위한 저장공간. > 가이드
     public GameObject Drill; //instantiate 생성 위한 저장공간. > 드릴
     public GameObject Implant; //instantiate 생성 위한 저장공간. > 임플란트 보철물
-    //AudioSource myAudio;
+    AudioSource myAudio;
+    public AudioClip[] myAudioClip;
+
+    public float Run_Force;
 
     bool isJump = false;
     bool isTG_out = false;
@@ -45,7 +49,7 @@ public class Player_Script : MonoBehaviour
         //Empty_Col = GameObject.Find("col_verdict").GetComponent<BoxCollider2D>();
         transform.position = new Vector3(-7, -2, 0);
 
-        //myAudio = GetComponent<AudioSource>();
+        myAudio = GetComponent<AudioSource>();
         //myAudio.volume =  0.4f;
         //myAudio.Play();
     }
@@ -62,19 +66,26 @@ public class Player_Script : MonoBehaviour
                     myAnim.SetBool("Jump", true);
                     myRigid.velocity = jump_speed * Vector3.up;
                     isJump = true;
+                    myAudio.PlayOneShot(myAudioClip[0]);
                 }
             }
             if (Input.GetKey(KeyCode.D)) // 오른 화살표 누를 때 오른쪽으로 달리기.
             {
                 mySr.flipX = false;
                 myAnim.SetBool("Run", true);
-                transform.Translate(run_speed * Time.deltaTime, 0, 0);
+                //myRigid.velocity = run_speed * Time.deltaTime * new Vector3(1, 0, 0); //이상한데?
+                //myRigid.AddForce(Run_Vector * Run_Force * Time.deltaTime); //얘도 이상한데??
+                transform.Translate(run_speed * Time.deltaTime, 0, 0); 
+                // velocity/addforce로 움직임을 부드럽게 바꾸기.
             }
             else if (Input.GetKey(KeyCode.A)) // 왼 화살표 누를 때 왼쪽으로 달리기.
             {
                 mySr.flipX = true;
                 myAnim.SetBool("Run", true);
-                transform.Translate(-run_speed * Time.deltaTime, 0, 0);
+                //myRigid.velocity = run_speed * Time.deltaTime * new Vector3(-1, 0, 0); //이상한데?
+                //myRigid.AddForce(-Run_Vector * Run_Force * Time.deltaTime); //얘도 이상한데??
+                transform.Translate(-run_speed * Time.deltaTime, 0, 0); 
+                // velocity/addforce로 움직임을 부드럽게 바꾸기.> 부드럽지만.. 뭔가 불편하다..
             }
             else // 아무것도 누르지 않았을때 서있기.
             {
@@ -89,7 +100,7 @@ public class Player_Script : MonoBehaviour
             {
                 SceneManager.LoadScene("EndScene");
                 endtimer = 0;
-            }
+            } 
         }
 
     }
@@ -136,6 +147,7 @@ public class Player_Script : MonoBehaviour
                     GameObject T_G = Instantiate(T_Guide);
                     T_G.transform.position = new Vector3(47.0f, -28.0f, 0.0f);
                     isTG_out = true;
+                    myAudio.PlayOneShot(myAudioClip[1]);
                 }
             }
             if (collision.gameObject.name == "Blue Button") // 파란버튼을 눌렀을 때
@@ -148,6 +160,7 @@ public class Player_Script : MonoBehaviour
                     D_Tr.transform.position = new Vector3(73.5f, -35.8f, 0);
                     isDrill_out = true;
                     Destroy(GameObject.Find("dissapear tilemap"), 0.4f);
+                    myAudio.PlayOneShot(myAudioClip[2]);
 
                 }
 
@@ -166,6 +179,7 @@ public class Player_Script : MonoBehaviour
                     GameObject IM_Tr = Instantiate(Implant);
                     IM_Tr.transform.position = new Vector3(101.5f, -36.2f, 0);
                     isImplant_out = true;
+                    myAudio.PlayOneShot(myAudioClip[3]);
                 }
 
 
@@ -212,6 +226,7 @@ public class Player_Script : MonoBehaviour
         {
             myAnim.SetTrigger("Goal");
             isGoal = true;
+            myAudio.PlayOneShot(myAudioClip[4]);
 
             loadsceneend = true;
             Debug.Log("몇초뒤에 엔딩으로 넘어갑니다. 여기는 유석님이 다음씬 넣어줄 자리.");
