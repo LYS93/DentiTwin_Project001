@@ -18,7 +18,7 @@ public class Player_Script : MonoBehaviour
     public GameObject Implant; //instantiate 생성 위한 저장공간. > 임플란트 보철물
     //AudioSource myAudio;
 
-    bool isJump = false;
+    public bool isJump = false;
     bool isTG_out = false;
     bool isDrill_out = false;
     bool isImplant_out = false;
@@ -30,6 +30,7 @@ public class Player_Script : MonoBehaviour
     bool loadsceneend;
     float endtimer = 0;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +63,7 @@ public class Player_Script : MonoBehaviour
                     myAnim.SetBool("Jump", true);
                     myRigid.velocity = jump_speed * Vector3.up;
                     isJump = true;
+                    
                 }
             }
             if (Input.GetKey(KeyCode.D)) // 오른 화살표 누를 때 오른쪽으로 달리기.
@@ -90,7 +92,7 @@ public class Player_Script : MonoBehaviour
                 SceneManager.LoadScene("EndScene");
                 endtimer = 0;
             }
-        }
+        }        
 
     }
 
@@ -99,7 +101,7 @@ public class Player_Script : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             myAnim.SetBool("Jump", false);
-            isJump = false;
+            //isJump = false;
         }
 
         if (collision.gameObject.CompareTag("Pushing Object"))
